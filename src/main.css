@@ -1,29 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 :root {
-
-/* COLORS */
-
-/* PRIMARY COLORS */
-
---clr-primary-red: hsl(0, 78%, 62%);
---clr-primary-cyan: hsl(180, 62%, 55%);
---clr-primary-orange: hsl(34, 97%, 64%);
---clr-primary-blue: hsl(212, 86%, 64%);
-
-/* NEUTRAL COLORS */
-
---clr-neutral-gray-100: hsl(0, 0%, 98%);
---clr-neutral-gray-300: hsl(229, 6%, 66%);
---clr-neutral-gray-700: hsl(234, 12%, 34%);
-
-/* FONTS */
-
---ff-main: 'Poppins', sans-serif;
-
+  --clr-primary-red: hsl(0, 78%, 62%);
+  --clr-primary-cyan: hsl(180, 62%, 55%);
+  --clr-primary-orange: hsl(34, 97%, 64%);
+  --clr-primary-blue: hsl(212, 86%, 64%);
+  --clr-neutral-gray-100: hsl(0, 0%, 98%);
+  --clr-neutral-gray-300: hsl(229, 6%, 66%);
+  --clr-neutral-gray-700: hsl(234, 12%, 34%);
+  --ff-main: 'Poppins', sans-serif;
 }
-
-/* GENERAL STYLES */
 
 * {
   box-sizing: border-box;
@@ -39,8 +25,6 @@ body {
   display: grid;
   place-items: center;
 }
-
-/* HERO SECTION */
 
 .hero {
   color: var(--clr-neutral-gray-700);
@@ -66,8 +50,6 @@ body {
   line-height: 1.65;
   margin-top: 1em;
 }
-
-/* CARDS SECTION */
 
 .cards {
   display: grid;
@@ -121,15 +103,11 @@ body {
   border-top: 4px solid var(--clr-primary-blue);
 }
 
-/* KEYFRAMES */
-
 @keyframes load-animation {
-
   0% {
     transform: translateY(-20px);
     opacity: 0;
   }
-
   100% {
     transform: translateY(0px);
     opacity: 1;
@@ -137,7 +115,6 @@ body {
 }
 
 @media (min-width: 500px) {
-  
   .container {
     max-width: 500px;
     margin: 0 auto;
@@ -145,56 +122,45 @@ body {
 }
 
 @media (min-width: 960px) {
-
   .container {
     max-width: 1230px;
   }
-
   .hero__title {
     font-size: 2.5rem;
     line-height: 1.4;
   }
-
   .hero__body {
     width: 50%;
     font-size: 1rem;
     margin: 0 auto;
     padding-top: 1.5em;
   }
-
   .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "l t r"
                          "l b r";
-                         gap: 2em;
+    gap: 2em;
   }
-
   .card {
     min-height: 260px;
   }
-
   .cyan {
     grid-area: l;
     align-self: center;
   }
-
   .red {
     grid-area: t;
   }
-
   .orange {
     grid-area: b;
   }
-
   .blue {
     grid-area: r;
     align-self: center;
   }
-
   .card img {
     right: 2.3em;
     bottom: 2.3em;
   }
-
 }

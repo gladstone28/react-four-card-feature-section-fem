@@ -1,7 +1,7 @@
 import React from 'react';
 import './main.css';
-import HeroSection from './HeroSection';
-import CardsSection from './CardsSection';
+import HeroSection from './components/HeroSection';
+import CardsSection from './components/CardsSection';
 
 const App = () => {
   return (
